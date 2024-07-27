@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 02:03:03 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4NDsyMDI0LTA3LTI3OyIxMjo0NDo1MiAiOzMxMjM="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTItMTI0Mjk4NDsyMDI0LTA3LTI3OyIwMjowMzowMyAiOzE7MzIyMQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="media" type="Real" array="False" size=""/>
+            <output expression="&quot;digite sua media:&quot;" newline="True"/>
+            <input variable="media"/>
+            <if expression="media&gt;=50">
+                <then>
+                    <output expression="&quot;media aprovada&quot;" newline="True"/>
+                </then>
+                <else>
+                    <if expression="media&lt;=49 and media&gt;=45">
+                        <then>
+                            <output expression="&quot;indo pro conselho&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;media reprovada&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
