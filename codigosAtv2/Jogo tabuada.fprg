@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Mateus"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 09:33:57 "/>
+        <attribute name="created" value="TWF0ZXVzO0RFU0tUT1AtMzJQR1U3QjsyMDI0LTA4LTAyOyIwOToxMTo1MCAiOzI4NTM="/>
+        <attribute name="edited" value="TWF0ZXVzO0RFU0tUT1AtMzJQR1U3QjsyMDI0LTA4LTAyOyIwOToyODoxOSAiOzE7Mjk3NA=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTQtMTI0Mjk3OTsyMDI0LTA4LTAzOyIwOTozMzo1NyAiOzM7MzI0Mw=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Declara&#231;&#227;o de vari&#225;veis "/>
+            <declare name="num1, num2, resultado, resposta, pontos, acertos, tentativa" type="Real" array="False" size=""/>
+            <comment text="atribuir valores iniciais "/>
+            <assign variable="tentativa" expression="3"/>
+            <assign variable="acertos" expression="0"/>
+            <assign variable="pontos" expression="0"/>
+            <output expression="&quot;Teste de matem&#225;tica, vamos ver se conhece a tabuada do 0 ao 10&quot;" newline="True"/>
+            <while expression="Tentativa&gt;=0">
+                <comment text="Atribuido fun&#231;&#227;o random"/>
+                <assign variable="num1" expression="random(10)"/>
+                <assign variable="num2" expression="random(10)"/>
+                <assign variable="resultado" expression="num1*num2"/>
+                <comment text="Mostrando a multiplica&#231;&#227;o que deve ser feita para o usu&#225;rio"/>
+                <output expression="&quot;Voc&#234; possui &quot;&amp;tentativa&amp;&quot; vidas&quot;" newline="True"/>
+                <output expression="&quot;Resolva a multiplica&#231;&#227;o &quot;&amp;num1&amp;&quot;x&quot;&amp;num2&amp;&quot;=?&quot;" newline="True"/>
+                <comment text="Recebendo a resposta do usu&#225;rio"/>
+                <input variable="resposta"/>
+                <comment text="Verificando a resposta"/>
+                <if expression="resultado=resposta">
+                    <then>
+                        <output expression="&quot;Parab&#233;ns acertou o resultado &quot;&amp;Resultado" newline="True"/>
+                        <assign variable="pontos" expression="pontos+1"/>
+                        <assign variable="acertos" expression="acertos+1"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;Resposta errada, resultado correto &#233;  &quot;&amp;resultado" newline="True"/>
+                        <assign variable="pontos" expression="pontos-1"/>
+                        <assign variable="tentativa" expression="tentativa-1"/>
+                    </else>
+                </if>
+                <comment text="Verificando se o us&#225;rio gostaria de continuar o teste"/>
+            </while>
+            <comment text="mensagem de finaliza&#231;&#227;o do programa"/>
+            <output expression="&quot;Total de pontos &quot;&amp;pontos" newline="True"/>
+            <output expression="&quot;Total de acertos: &quot;&amp;acertos" newline="True"/>
+            <output expression="&quot;Teste finalizado&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
