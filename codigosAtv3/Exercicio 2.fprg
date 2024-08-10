@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="Ex2"/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 09:41:27 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7U041MTQtMTI0Mjk3OTsyMDI0LTA4LTAzOyIwNDo1MDowNCAiOzMxMTk="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7U041MTQtMTI0Mjk3OTsyMDI0LTA4LTAzOyIwNToyMTozMSAiOzI7MzIyNw=="/>
+        <attribute name="edited" value="TWF0ZXVzO0RFU0tUT1AtMzJQR1U3QjsyMDI0LTA4LTA1OyIwNjo0NDoxNSAiOzM7Mjk3MA=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyTjEyNDI5OTk7MjAyNC0wOC0xMDsiMDk6MzA6NDkgIjsxOzMzMzk="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyTjEyNDI5OTg7MjAyNC0wOC0xMDsiMDk6NDE6MjcgIjsxOzMzMzY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nomeProduto" type="String" array="True" size="3"/>
+            <declare name="custoProduto, precoProduto, lucroProduto" type="Real" array="True" size="3"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="&quot;Informe o nome do Produto&quot;" newline="True"/>
+                <input variable="nomeProduto[i]"/>
+                <output expression="&quot;Informe o custo do produto: &quot;" newline="True"/>
+                <input variable="custoProduto[i]"/>
+                <output expression="&quot;Informe o pre&#231;o do produto: &quot;" newline="True"/>
+                <input variable="precoProduto[i]"/>
+                <assign variable="lucroProduto[i]" expression="((precoProduto[i]-custoProduto[i])/precoProduto[i])*100"/>
+            </for>
+            <for variable="i" start="0" end="2" direction="inc" step="1">
+                <output expression="1+i&amp;&quot; Produto: &quot;&amp;nomeProduto[i]" newline="True"/>
+                <output expression="1+i&amp;&quot; Custo produto: R$ &quot;&amp;custoProduto[i]" newline="True"/>
+                <output expression="1+i&amp;&quot; Pre&#231;o de venda do produto: R$ &quot;&amp;precoProduto[i]" newline="True"/>
+                <output expression="1+i&amp;&quot; Margem de lucro produto: &quot;&amp;lucroProduto[i]&amp;&quot;%&quot;" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-03 05:21:13 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1FUTVMSkdPOzIwMjQtMDgtMDM7IjA0OjMxOjM5ICI7MzQ4Mg=="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7REVTS1RPUC1FUTVMSkdPOzIwMjQtMDgtMDM7IjA1OjIxOjEzICI7MTszNTgy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="celsius" type="Integer" array="False" size=""/>
+            <declare name="fahrenheit" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite a temperatura em Fahrenheit: &quot;" newline="True"/>
+            <input variable="fahrenheit"/>
+            <call expression="converterFahrenheitParaCelsius(fahrenheit)"/>
+            <assign variable="celsius" expression="converterFahrenheitParaCelsius(fahrenheit)"/>
+            <output expression="&quot;A temperatura em Celsius &#233;: &quot; &amp; celsius&amp; &quot; &#186;C&quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="converterFahrenheitParaCelsius" type="Real" variable="celsius">
+        <parameters>
+            <parameter name="fahrenheit" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="celsius" type="Integer" array="False" size=""/>
+            <assign variable="celsius" expression="(fahrenheit - 32) / 1.8"/>
+        </body>
+    </function>
+</flowgorithm>
