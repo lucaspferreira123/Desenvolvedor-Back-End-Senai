@@ -26,7 +26,7 @@ const criarOrdem = async (cronograma) => {
 }
 const ExibirMenuOrdens = async () => {
     console.log("______________________________________________");
-    const opcao = readline.questionInt(" 1- Criar Ordem;\n 2- Ver Ordem;\n 3- Alterar Ordem;\n 4- Excluir Ordem;\n\n Escolha uma opção:");
+    const opcao = readline.questionInt(" 1- Criar Ordem;\n 2- Ver Ordem;\n 3- Alterar Ordem;\n 4- Excluir Ordem;\n 5-Encerrar o programa;\n Escolha uma opção:");
     console.log("______________________________________________");
 
     switch (opcao) {
